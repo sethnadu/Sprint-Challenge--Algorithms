@@ -93,11 +93,16 @@ class SortingRobot:
         return self._light == "ON"
 
     def sort(self):
-        """
-        Sort the robot's list.
-        """
-        # Fill this out
-        pass
+        # Missread directions, could still possibly use
+        # for i in range(0, len(robot._list)):
+        #     for j in range(len(robot._list)- 1, 0, -1):
+        #         if robot._list[i] < robot._list[j]:
+        #             robot._list.append(robot._list[j])
+        #             robot._list.remove(robot._list[j])
+        #         elif robot._list[i] > robot._list[j]:
+        #             robot._list.append(robot._list[i])
+        #             robot._list.remove(robot._list[i])
+
 
 
 if __name__ == "__main__":
@@ -109,4 +114,4 @@ if __name__ == "__main__":
     robot = SortingRobot(l)
 
     robot.sort()
-    print(robot._list)
+    print("list", robot._list)
