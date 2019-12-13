@@ -105,17 +105,19 @@ class SortingRobot:
 
         # self.set_light_on()
         # while self.light_is_on() is False:
+        def beginning(self):
+        while self.can_move_left() is True:
+            self.move_left()
 
-        # Go all the way back to beginning
-        def move_Left():
-            while self.can_move_left() is True:
-                self.move_left()
 
         self.set_light_on()    
         while self.light_is_on():
 
+            # Edge Case to loop through function
+            self.set_light_off()
+
             if self.compare_item() is None and self.can_move_right() is False:
-                move_Left()
+                beginning()
 
             while self.can_move_right():
                 #  If the held item's value is greater, return 1.
@@ -131,6 +133,8 @@ class SortingRobot:
                 if self.compare_item() is -1 or self.compare_item() is 0:
                     self.move_left()
                 elif self.compare_item() is 1:
+                    # Edge case to loop through method
+                    self.set_light_on()
                     self.swap_item()
                     self.move_left()
                 # check item switched none

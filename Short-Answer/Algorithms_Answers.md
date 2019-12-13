@@ -2,7 +2,7 @@
 
 ## Exercise I
 
-a) O(n): This is also a linear complexity as there is one while loop, and it will run longer as n increases.
+a) O(n): This is a linear complexity as there is one while loop, and it will run longer as n increases.
 
 
 b) O(n^2): There is a for loop running through n, with a while loop that also is comparing each and every n. As n get's higher, the runtime will take longer as it has two n's to calculate everytime.
